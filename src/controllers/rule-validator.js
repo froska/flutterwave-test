@@ -1,6 +1,13 @@
 import formatResponse from "../utils/format-response.js";
 import ValidatorService from "../service/validator.js";
 
+/**
+ * Controller method for /validate-rule endpoint
+ * @param {Objec} req The request object
+ * @param {Objec} res The response object
+ * @param {Func} next The next object
+ * @returns result of the rule validation request, in jsend response format
+ */
 async function validateRule(req, res, next) {
   try {
     const validatorService = new ValidatorService(req.body);

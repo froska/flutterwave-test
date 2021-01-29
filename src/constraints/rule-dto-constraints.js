@@ -1,6 +1,7 @@
-import { body } from "express-validator";
+import expressValidator from "express-validator";
 import _ from "lodash";
 
+const { body } = expressValidator;
 const ruleDtoConstraints = () => [
   body("rule")
     .not()

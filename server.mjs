@@ -18,7 +18,4 @@ server.use("*", function (req, res, next) {
   });
 });
 
-const PORT = process.env.PORT || 4000;
-server.listen(PORT, () => {
-  console.log(`server is running on port: ${PORT}`);
-});
+export { server as default };

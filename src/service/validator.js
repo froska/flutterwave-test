@@ -8,7 +8,9 @@ class ValidatorService {
     this.conditionValue = ruleDto.rule.condition_value;
     this.errs = ruleDto.rule.condition_value;
   }
-
+  /**
+   * helper method for the validation logic
+   */
   getField() {
     if (_.isNaN(parseInt(this.field)) && this.field.split(".").length == 2) {
       const levels = this.field.split(".");
@@ -17,7 +19,9 @@ class ValidatorService {
       return this.data[this.field];
     }
   }
-
+  /**
+   * helper method for the validation logic
+   */
   validate(fieldValue) {
     let result = false;
     switch (this.condition) {
@@ -47,7 +51,9 @@ class ValidatorService {
 
     return result;
   }
-
+  /**
+   * main method that handles the validation logic
+   */
   validateRule() {
     const fieldValue = this.getField();
     const isValid = this.validate(fieldValue);

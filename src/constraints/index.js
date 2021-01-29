@@ -1,8 +1,10 @@
-import { validationResult } from "express-validator";
+import expressValidator from "express-validator";
 import formatResponse from "../utils/format-response.js";
 
+const { validationResult } = expressValidator;
+
 /**
- * Middleware that applies express validator on the validation rules.
+ * Middleware that applies express validator on the rule-dto-constaints rules.
  *
  * @param {object} req The request object
  * @param {object} res The response object

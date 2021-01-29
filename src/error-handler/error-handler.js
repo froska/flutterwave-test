@@ -35,7 +35,7 @@ const handleError = (err, res) => {
 
 /**
  *
- *
+ * Helpr to catch invalid Json request format
  * @param { Object } err - error
  * @param {Object } req - request
  * @param {Object } res - response
