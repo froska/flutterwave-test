@@ -1,8 +1,6 @@
 import express from "express";
 import { catchInvalidJson } from "./src/error-handler/index.js";
 import routes from "./src/routes/index.js";
-import dotenv from "dotenv";
-dotenv.config();
 
 const server = express();
 
