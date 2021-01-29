@@ -6,10 +6,10 @@ const server = express();
 
 server.use(express.json());
 
-server.use("/", routes);
+server.use(routes);
 server.use(catchInvalidJson);
-server.use("*", function (req, res, next) {
-  res.send({
+server.use(function (req, res, next) {
+  res.status(404).send({
     message: "Cannot find path.",
     status: "error",
     data: null,
