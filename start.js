@@ -1,7 +1,7 @@
 import app from "./server.mjs";
 import dotenv from "dotenv";
 dotenv.config();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`server is running on port: ${PORT}`);
 });
