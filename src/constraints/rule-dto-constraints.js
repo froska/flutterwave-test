@@ -51,9 +51,9 @@ const ruleDtoConstraints = () => [
       return true;
     })
     .custom((value, { req }) => {
-      const levels = req.body.rule.field?.split(".");
+      const levels = req.body.rule.field && req.body.rule.field.split(".");
 
-      if (_.isNaN(parseInt(req.body.rule.field)) && levels?.length == 2) {
+      if (_.isNaN(parseInt(req.body.rule.field)) && levels.length == 2) {
         if (
           _.isUndefined(value[levels[0]]) ||
           _.isUndefined(value[levels[0]][levels[1]])
